@@ -1,0 +1,4 @@
+method,estimate
+Naive post-only,1339.6214674282592
+Difference-in-Differences,821.4876400788819
+Propensity Score Matching,828.6543859649123
