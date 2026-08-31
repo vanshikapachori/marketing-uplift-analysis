@@ -22,16 +22,16 @@ Both causal methods land within ~3% of the true simulated effect ($850), while t
 
 **Parallel trends check** (below) confirms treated and control stores moved together before the campaign launched — the key assumption DiD relies on:
 
-![Parallel trends](plot_parallel_trends.png)
+![Parallel trends](uplift-analysis/plot_parallel_trends.png)
 
-![Method comparison](plot_method_comparison.png)
+![Method comparison](uplift-analysis/plot_method_comparison.png)
 
 ## Files
-- `01_generate_data.py` — simulates the store-week panel dataset
-- `02_analysis.py` — naive comparison, DiD (manual OLS with cluster-robust SE), and PSM
-- `03_plots.py` — generates the two charts above
-- `campaign_panel.csv` — generated panel dataset
-- `results_summary.csv` — final uplift estimates by method
+- `scripts/01_generate_data.py` — simulates the store-week panel dataset
+- `scripts/02_analysis.py` — naive comparison, DiD (manual OLS with cluster-robust SE), and PSM
+- `scripts/03_plots.py` — generates the two charts above
+- `dataset/campaign_panel.csv` — generated panel dataset
+- `uplift-analysis/results_summary.csv` — final uplift estimates by method
 
 ## Tools
 Python, Pandas, NumPy, scikit-learn (propensity model + nearest-neighbor matching), Matplotlib. DiD regression and cluster-robust standard errors implemented manually via matrix algebra (no `statsmodels` dependency).
